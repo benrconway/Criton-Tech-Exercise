@@ -1,1 +1,17 @@
 // Larger container to put all input fields into.
+import React from 'react';
+import InputBox from './input_box.jsx'
+
+const InputContainer = (props) => {
+
+// cycle through the props of inputs data array and make input boxes. this
+// example will only have one, but could be expanded.
+// Then add function for collecting information from the input box and sending
+// it to Geocoder which will in turn be passed up the ladder to change the
+// output state which filters down and alters the  output boxes.
+
+
+
+}
+
+export default InputContainer;

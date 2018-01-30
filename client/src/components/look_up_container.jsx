@@ -28,4 +28,14 @@ class LookUpContainer extends React.Component {
     }
   }
 }
-export default CommentBox;
+// method to alter state, which will be passed down to input container
+LookUpContainer.prototype.stateAlterationMethod = function () {
+
+};
+// method to discover handle response codes other than 200 and display
+//appropriate errors
+LookUpContainer.prototype.responseCodeInterpretation = function () {
+
+};
+
+export default LookUpContainer;
