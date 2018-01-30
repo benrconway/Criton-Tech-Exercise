@@ -7,7 +7,7 @@ const OutputBox = (props) => {
     let id = props.id;
     return(
       <div className="box output-box">
-        <p id={id}>{text}</p>
+        <p>{text}</p>
       </div>
     )
 

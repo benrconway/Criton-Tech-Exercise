@@ -15,7 +15,6 @@ const outputs = props.data.map((text, index) => {
     <OutputBox
       key={index}
       text={text}
-      id={index}
     />
   )
 })

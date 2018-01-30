@@ -12,7 +12,7 @@ class LookUpContainer extends React.Component {
     super(props);
     this.state = {
       data: {
-            input: ["Enter the address here"],
+            input: ["Enter the Address here"],
             output: ["Latitude", "Longitude"]
             }
     }
