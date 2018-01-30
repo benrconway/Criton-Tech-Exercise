@@ -10,8 +10,21 @@ const OutputContainer = (props) => {
 // text related to what is in props.
 // Don't forget to add tags for indentifying where various CSS markers will
 // make changes to what is shown.
+const outputs = props.data.map((text, index) => {
+  return(
+    <OutputBox
+      key={index}
+      text={text}
+      id={index}
+    />
+  )
+})
 
-
+return (
+  <div id="output-container">
+    {outputs}
+  </div>
+)
 }
 
 export default OutputContainer;

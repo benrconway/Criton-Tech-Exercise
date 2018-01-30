@@ -3,6 +3,13 @@
 import React from 'react';
 
 const OutputBox = (props) => {
+    let text = props.text;
+    let id = props.id;
+    return(
+      <div className="output-box">
+        <p id={id}>{text}</p>
+      </div>
+    )
 
 
 }

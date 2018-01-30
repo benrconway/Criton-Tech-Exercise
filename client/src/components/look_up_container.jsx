@@ -4,7 +4,7 @@
 
 import React from 'react';
 import InputContainer from './input_container.jsx';
-// import OutputContainer from './output_container.jsx';
+import OutputContainer from './output_container.jsx';
 
 class LookUpContainer extends React.Component {
 
@@ -22,7 +22,7 @@ class LookUpContainer extends React.Component {
     return (
       <div className="look-up-container">
         <InputContainer data={this.state.data.input} />
-        {/* <OutputContainer data={this.state.data.output} /> */}
+        <OutputContainer data={this.state.data.output} />
       </div>
     )
   }
