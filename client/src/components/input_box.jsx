@@ -4,8 +4,15 @@
 import React from 'react';
 
 const InputBox = (props) => {
+  let text = props.text;
+  let id = props.id;
+  return(
+    <div className="input-box">
+      <input type="Text" id={id} placeholder={text}/>
+    </div>
+  )
 
 
 }
 
-export default InputBox; 
+export default InputBox;

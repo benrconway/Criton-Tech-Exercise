@@ -10,7 +10,21 @@ const InputContainer = (props) => {
 // it to Geocoder which will in turn be passed up the ladder to change the
 // output state which filters down and alters the  output boxes.
 
+  const inputs = props.data.map((text, index) => {
+    return(
+      <InputBox
+        key={index}
+        text={text}
+        id={index}
+      />
+    )
+  })
 
+  return (
+    <div id="input-container">
+      {inputs}
+    </div>
+  )
 
 }
 
