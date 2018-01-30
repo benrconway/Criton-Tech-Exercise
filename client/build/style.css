@@ -1,18 +1,21 @@
 /* Will need to include one for boxes in general and then one for input
  another for output boxes. */
 .body{
-  
+text-align: center;
 }
 
 .box {
 
+padding: 20px;
 }
 
-.input-box{
-
+input[type=text]{
+width: 98%;
+height: 40px;
 }
 
 .output-box{
-
-
+border: 1px solid black;
+margin: 20px;
+border-radius: 25px;
 }
