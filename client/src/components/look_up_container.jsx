@@ -24,8 +24,8 @@ class LookUpContainer extends React.Component {
         <OutputContainer data={this.state.data.output} />
       </div>
 
-    )
+        )
+    }
   }
 }
-
 export default CommentBox;
