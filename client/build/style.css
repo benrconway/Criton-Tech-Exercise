@@ -19,3 +19,13 @@ border: 1px solid black;
 margin: 20px;
 border-radius: 25px;
 }
+
+#submitButton {
+  align-items: center;
+  width: 200px;
+}
+
+#input-container{
+  display: flex;
+  flex-direction: column;
+}

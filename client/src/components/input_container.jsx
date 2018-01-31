@@ -20,9 +20,24 @@ const InputContainer = (props) => {
     )
   })
 
+    window.addEventListener('keyup', function(event){
+      // console.log(event.key);
+      if(event.key === "Enter"){
+          props.handleInput()
+      }
+    })
+
   return (
     <div id="input-container">
-      {inputs}
+      <form id="input-form">
+        {inputs}
+
+        <input type="button"
+               onClick={props.handleInput}
+               id="submitButton"
+               title="Click to Geocode"
+               value="Click to Geocode"/>
+      </form>
     </div>
   )
 

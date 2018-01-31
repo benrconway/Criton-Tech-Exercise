@@ -2,9 +2,12 @@
 // Input and output containers will be inserted into here and they in turn will
 // have input and output boxes entered inside them.
 
+
 import React from 'react';
 import InputContainer from './input_container.jsx';
 import OutputContainer from './output_container.jsx';
+
+
 
 class LookUpContainer extends React.Component {
 
@@ -13,30 +16,51 @@ class LookUpContainer extends React.Component {
     this.state = {
       data: {
             input: ["Enter the Address here"],
-            output: ["Latitude", "Longitude"]
+            output: {
+              fields:["Latitude: ", "Longitude: "],
+              results: []
             }
-    }
+        }
+      }
   }
 
   render(){
     return (
       <div className="look-up-container">
-        <InputContainer data={this.state.data.input} />
+        <InputContainer handleInput={this.geocodeInput} data={this.state.data.input} />
         <OutputContainer data={this.state.data.output} />
       </div>
     )
   }
 }
 
-//
-// // method to alter state, which will be passed down to input container
+const geocoder = new google.maps.Geocoder();
+
+
+
+// method to alter state, which will be passed down to input container
 // LookUpContainer.prototype.stateAlterationMethod = function () {
 //
 // };
 // // method to discover handle response codes other than 200 and display
 // //appropriate errors
-// LookUpContainer.prototype.responseCodeInterpretation = function () {
-//
-// };
+LookUpContainer.prototype.geocodeInput = function (address) {
+  let targetAddress = document.getElementById("input0").value;
+  let geocodingObject = {address: targetAddress };
+
+  // various functions to alter state and handle error appropriately.
+  geocoder.geocode( geocodingObject, function(result, status) {
+    if(status === google.maps.GeocoderStatus.OK) {
+      console.log("success with", result[0].geometry.location.lat())
+    } else {
+      console.log("Geocoding has failed because of " + status +
+      ", please check your address and try again.")
+    }
+  })
+
+
+
+
+};
 
 export default LookUpContainer;

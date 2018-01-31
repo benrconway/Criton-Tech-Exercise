@@ -5,7 +5,8 @@ import React from 'react';
 
 const InputBox = (props) => {
   let text = props.text;
-  let id = props.id;
+  let id = "input" + props.id;
+
   return(
     <div className="box input-box">
       <input type="Text" id={id} placeholder={text}/>
