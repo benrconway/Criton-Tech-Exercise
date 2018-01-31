@@ -52,6 +52,7 @@ LookUpContainer.prototype.geocodeInput = function (address) {
   geocoder.geocode( geocodingObject, function(result, status) {
     if(status === google.maps.GeocoderStatus.OK) {
       console.log("success with", result[0].geometry.location.lat())
+      this.setState()
     } else {
       console.log("Geocoding has failed because of " + status +
       ", please check your address and try again.")

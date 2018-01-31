@@ -31,12 +31,6 @@ const InputContainer = (props) => {
     <div id="input-container">
       <form id="input-form">
         {inputs}
-
-        <input type="button"
-               onClick={props.handleInput}
-               id="submitButton"
-               title="Click to Geocode"
-               value="Click to Geocode"/>
       </form>
     </div>
   )
