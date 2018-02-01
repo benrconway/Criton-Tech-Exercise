@@ -1,25 +1,51 @@
-/* Will need to include one for boxes in general and then one for input
- another for output boxes. */
-.body{
-text-align: center;
-}
+/* General CSS as follows, there has been some refactoring for my move from
+React to vanilla JS. Had I not made the move and managed to straighten out the
+bugs from React I feel I would have flexboxed it all and made it more responsive.
+ */
 
-.box {
-padding: 20px;
+
+body{
+  background-color: purple;
 }
 
 input[type=text]{
-width: 98%;
-height: 40px;
+  /* Option A: using React components */
+/* width: 98%;
+height: 40px; */
+
+/* Option B: using vanilla JS */
+width: 96%;
+height: 58px;
+margin: 20px;
+}
+/* Classes */
+.box {
+padding: 10px;
 }
 
 .output-box{
 border: 1px solid black;
 margin: 20px;
-border-radius: 25px;
+border-radius: 10px;
+background-color: Gainsboro;
+opacity: .5;
 }
 
-#input-container{
+/* Specific Ids */
+#app{
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 100px 20px;
+}
+
+#error-text{
+  color: red;
+  margin-left: 25px;
+}
+
+/* Part of the react styling.
+ #input-container{
   display: flex;
   flex-direction: column;
-}
+} */

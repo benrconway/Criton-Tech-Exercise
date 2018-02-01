@@ -21,8 +21,9 @@ const InputContainer = (props) => {
   })
 
     window.addEventListener('keyup', function(event){
-      // console.log(event.key);
+      event.preventDefault();
       if(event.key === "Enter"){
+          
           props.handleInput()
       }
     })

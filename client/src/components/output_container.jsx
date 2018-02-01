@@ -6,22 +6,41 @@ import OutputBox from './output_box.jsx';
 
 const OutputContainer = (props) => {
 
-//Map through the props data to make sufficient number of output boxes with
-// text related to what is in props.
-// Don't forget to add tags for indentifying where various CSS markers will
-// make changes to what is shown.
-const outputs = props.data.fields.map((text, index) => {
-  return(
-    <OutputBox
-      key={index}
-      text={text}
-    />
-  )
-})
+  //Map through the props data to make sufficient number of output boxes with
+  // text related to what is in props.
+
+// At present the props get passed down, but not all addresses seem to work.
+// They only re-render changes every now and then and seem to be blasted back to
+// original by a refresh that I haven't located. Could it be Firefox?
+
+  console.log("props passed down: ", props.data)
+  let content;
+    if(props.data.results.length <= 0 ){
+      content = props.data.fields.map((value, index) =>{
+        return (
+          <OutputBox
+            key={index}
+            text={value}
+          />
+        )
+      })
+    } else {
+      content = props.data.results.map((value, index)=>{
+        return (
+          <OutputBox
+            key={index}
+            text={value}
+          />
+        )
+      })
+
+    }
+
+
 
 return (
   <div id="output-container">
-    {outputs}
+    {content}
   </div>
 )
 }
