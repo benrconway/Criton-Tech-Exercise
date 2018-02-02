@@ -8,7 +8,7 @@ import Renderer from "./renderer.js"
 const geocoder = new google.maps.Geocoder();
 
 const basicView = {
-  renderBasicContent: function(){
+  displayBasicContent: function(){
     var box = document.getElementById("app")
     box.className = "main-container";
     this.createInputField(box);
@@ -38,8 +38,10 @@ const basicView = {
     // that will display as desired
     latDiv.appendChild(latPtag);
     lngDiv.appendChild(lngPtag);
+
     containingDiv.appendChild(latDiv);
     containingDiv.appendChild(lngDiv);
+
     parentDiv.appendChild(containingDiv);
 
   },
@@ -53,6 +55,7 @@ const basicView = {
     input.type = "Text";
     input.id = "address-input";
     input.placeholder = "Address";
+
     containingDiv.appendChild(input);
 
     // This event listener will gives functionality of using the 'enter' key
@@ -70,39 +73,16 @@ const basicView = {
             Renderer.renderResults(result[0].geometry.location)
           } else {
             // function that will replace appropriate bits and pieces to show an error
-            const errorReport = "Address not found, please check the address and try again."
+            const errorReport = "Address not found, please check your entry and try again."
             Renderer.renderError(errorReport)
           }
         })
         }
       }
     )
+    
     parentDiv.appendChild(containingDiv);
   }
-
-
-  //these have been farmed out to a seperate file to be imported and make them
-  //more adaptable and functional.
-
-  // renderResults: function(latLng){
-  //   const lat = latLng.lat()
-  //   const lng = latLng.lng()
-  //   const latField = document.getElementById("lat-output")
-  //   const lngField = document.getElementById("lng-output")
-  //   latField.innerText = lat;
-  //   lngField.innerText = lng;
-  //
-  // },
-  //
-  // renderError: function(report){
-  //   const parent = document.getElementById("input-div")
-  //   const pTag = document.createElement("p");
-  //   pTag.id = "error-text"
-  //   pTag.innerText = report;
-  //   parent.appendChild(pTag);
-  //
-  // }
-
 }
 
 export default basicView;

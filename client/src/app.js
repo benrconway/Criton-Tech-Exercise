@@ -6,7 +6,7 @@ import basicView from './views/basic_view.js';
 
 window.addEventListener('DOMContentLoaded', (event) => {
   // event.preventDefault()
-  basicView.renderBasicContent()
+  basicView.displayBasicContent()
 
   // ReactDOM.render(
   //   <LookUpContainer/>,
