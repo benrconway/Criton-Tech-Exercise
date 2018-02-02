@@ -24,3 +24,7 @@ Any questions, please send them to my email address: benrconway84@gmail.com
 
 If you have the know-how to explain what was going wrong with my React
 components I would be glad to hear from you.
+
+##### To run this application.
+Clone the repo, and in the top directory, use the commands 'npm install' and
+'npm start'
