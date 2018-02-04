@@ -4,7 +4,7 @@
 // This code has been taken from a project that I did not write, and represents
 // my first attempt to understand testing the Dom directly rather than simply
 // experimenting with running code and making alterations as it works.
-import basicView from '../../../client/src/views/basic_view.js'
+  const basicView = require('../../client/src/views/basic_view.js');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);

@@ -3,7 +3,7 @@
 // moved from React to vanilla Javascript. I have the same functionality in a
 // great deal less time, however the same errors are causing continued problems.
 
-import Renderer from "./renderer.js"
+const Renderer = require("./renderer.js")
 
 const geocoder = new google.maps.Geocoder();
 
@@ -57,7 +57,7 @@ const basicView = {
     input.placeholder = "Address";
     // For ease of understanding I would prefer to use the following placeholder
     // input.placeholder = "Type address here and press enter/return"
-    
+
     containingDiv.appendChild(input);
 
     // This event listener will gives functionality of using the 'enter' key
@@ -87,4 +87,6 @@ const basicView = {
   }
 }
 
-export default basicView;
+module.exports=basicView;
+//
+// export default basicView;

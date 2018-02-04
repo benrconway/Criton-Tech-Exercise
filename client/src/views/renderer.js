@@ -50,4 +50,6 @@ const renderer = {
 
 }
 
-export default renderer;
+module.exports=renderer;
+//
+// export default renderer;
