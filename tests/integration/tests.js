@@ -28,7 +28,7 @@ describe('calculator functionality', function() {
     console.log("trying to fire enter key now");
     const e = $.Event("keyup");
     e.which = 13;
-    parentDiv.$("#input-div").trigger(e);
+    parent.$("#input-div").trigger(e);
 
     expect(latOutput.getAttribute('value').to.eventually.equal('55.953252'));
   })
