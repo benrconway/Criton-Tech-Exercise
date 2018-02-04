@@ -55,7 +55,9 @@ const basicView = {
     input.type = "Text";
     input.id = "address-input";
     input.placeholder = "Address";
-
+    // For ease of understanding I would prefer to use the following placeholder
+    // input.placeholder = "Type address here and press enter/return"
+    
     containingDiv.appendChild(input);
 
     // This event listener will gives functionality of using the 'enter' key
@@ -80,7 +82,7 @@ const basicView = {
         }
       }
     )
-    
+
     parentDiv.appendChild(containingDiv);
   }
 }
