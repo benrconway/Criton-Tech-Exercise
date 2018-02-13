@@ -1,34 +1,25 @@
-/* General CSS as follows, there has been some refactoring for my move from
-React to vanilla JS. Had I not made the move and managed to straighten out the
-bugs from React I feel I would have flexboxed it all and made it more responsive.
+/* I feel I would have liked to flexbox it all and have made it more responsive.
  */
-
-
 body{
   background-color: purple;
 }
 
 input[type=text]{
-  /* Option A: using React components */
-/* width: 98%;
-height: 40px; */
-
-/* Option B: using vanilla JS */
-width: 96%;
-height: 58px;
-margin: 20px;
+  width: 96%;
+  height: 58px;
+  margin: 20px;
 }
 /* Classes */
 .box {
-padding: 10px;
+  padding: 10px;
 }
 
 .output-box{
-border: 1px solid black;
-margin: 20px;
-border-radius: 10px;
-background-color: Gainsboro;
-opacity: .5;
+  border: 1px solid black;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: Gainsboro;
+  opacity: .5;
 }
 
 /* Specific Ids */
@@ -43,9 +34,3 @@ opacity: .5;
   color: red;
   margin-left: 25px;
 }
-
-/* Part of the react styling.
- #input-container{
-  display: flex;
-  flex-direction: column;
-} */
